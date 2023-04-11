@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        array = [1,2,3,4,5,6];
+        function Search_Array(array, val) {
+            if (!array.length) {
+                return false;
+            }
+            
+            if (array[0] === val) {
+                return true;
+            }
+            else {
+                return Search_Array(array.slice(1), val);
+            }
+        }
+
+        console.log(Search_Array(array, 4));
+
+    </script>
+
+
+</body>
+
+</html>

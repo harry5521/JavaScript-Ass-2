@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function Save_Object(obj) {
+            for (const [key, val] of Object.entries(obj)) {
+                localStorage.setItem(key, val);
+            }
+
+            const New_Obj = {};
+            for (const [key] of Object.entries(obj)) {
+                New_Obj[key] = localStorage.getItem(key);
+            }
+            return New_Obj;
+        }
+        const My_Obj = {
+            name: "Abu Huraira",
+            filed: "Software Eng",
+            age: 19,
+        };
+        const Ret_Obj = Save_Object(My_Obj);
+        console.log(Ret_Obj);
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function Add_Closure(num) {
+            return function (n) {
+                return num + n;
+            }
+        }
+        // Example :
+        const Add5 = Add_Closure(5);
+        console.log(Add5(10));
+        console.log(Add5(20));
+
+    </script>
+
+
+</body>
+
+</html>
